@@ -1,6 +1,7 @@
 package com.bandi.util;
 
 import java.util.Arrays;
+import java.util.List;
 
 public class Utils {
 
@@ -9,6 +10,14 @@ public class Utils {
             System.out.println(objectArray);
         } else {
             Arrays.stream(objectArray).forEach(System.out::println);
+        }
+    }
+
+    public static <T> void printArray(List<T> objectArray) {
+        if (objectArray == null || objectArray.size() == 0) {
+            System.out.println(objectArray);
+        } else {
+            objectArray.stream().forEach(System.out::println);
         }
     }
 
